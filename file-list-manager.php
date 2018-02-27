@@ -45,7 +45,7 @@ function file_list_manager_admin_page () {
 
 function mt_settings_page() {
     echo "<h2>" . __( 'File List Manager Configurations', 'menu-test' ) . "</h2>";
-    //include_once('file_list_manager_settings_page.php');
+    include_once('file_list_manager_settings_page.php');
 }
 
 ?>
