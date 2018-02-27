@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Akismet
+ * @package File List Manager
  */
 /*
 Plugin Name: File List Manager
