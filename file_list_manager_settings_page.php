@@ -16,30 +16,22 @@
 <div class="wrap">
   <div id="icon-options-general" class="icon32"> <br>
   </div>
-  <h2>Footer Settings</h2>
+  <h2>File List Manager - Upload Your Files Here</h2>
   <?php if(isset($_POST['wphw_submit']) && $chk):?>
   <div id="message" class="updated below-h2">
     <p>Content updated successfully</p>
   </div>
   <?php endif;?>
-  <div class="metabox-holder">
-    <div class="postbox">
-      <h3><strong>Enter footer text and click on save button.</strong></h3>
-      <form method="post" action="">
-        <table class="form-table">
-          <tr>
-            <th scope="row">Footer Text</th>
-            <td><input type="text" name="footertextname" 
-value="<?php echo get_option('footer_text');?>" style="width:350px;" /></td>
-          </tr>
-          <tr>
-            <th scope="row">&nbsp;</th>
-            <td style="padding-top:10px;  padding-bottom:10px;">
-<input type="submit" name="wphw_submit" value="Save changes" class="button-primary" />
-</td>
-          </tr>
-        </table>
-      </form>
-    </div>
-  </div>
+
+
+<div class='image-preview-wrapper'>
+		<img id='image-preview' src='' width='100' height='100' style='max-height: 100px; width: 100px;'>
+	</div>
+	<input id="upload_image_button" type="button" class="button" value="<?php _e( 'Upload image' ); ?>" />
+	<input type='hidden' name='image_attachment_id' id='image_attachment_id' value=''>
+
+  <!-- here is where we put the media upload box ... -->
+
+
+
 </div>

@@ -35,17 +35,25 @@ Copyright 2018 AppIgnition, LLC.
 add_action('admin_menu', 'my_admin_menu');
 
 function my_admin_menu () {
-    add_menu_page('File List Manager title', 'File List Manager', 'manage_options', 'file_list_manager_settings_page', 'mt_settings_page');
-    add_submenu_page('file_list_manager_settings_page', 'Page title', 'Sub-menu title', 'manage_options', 'child-submenu-handle');
+    add_menu_page('File List Manager title', 'File List Manager', 'manage_options', 'file_list_manager_settings_page', 'file_list_settings_page');
 }
 
-function file_list_manager_admin_page () {
-    echo 'this is where we will edit the variable';
-}
-
-function mt_settings_page() {
-    echo "<h2>" . __( 'File List Manager Configurations', 'menu-test' ) . "</h2>";
+function file_list_settings_page() {
+    echo "<h2>" . __( 'File List Manager Plugin', 'menu-test' ) . "</h2>";
     include_once('file_list_manager_settings_page.php');
+}
+
+
+
+function media_selector_settings_page_callback() {
+
+	wp_enqueue_media();
+
+	?><div class='image-preview-wrapper'>
+		<img id='image-preview' src='' width='100' height='100' style='max-height: 100px; width: 100px;'>
+	</div>
+	<input id="upload_image_button" type="button" class="button" value="<?php _e( 'Upload image' ); ?>" />
+	<input type='hidden' name='image_attachment_id' id='image_attachment_id' value=''><?php
 }
 
 ?>
